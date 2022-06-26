@@ -3,36 +3,25 @@
 {% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>my first Django app</title>
+    <title>Travel Agency Chatbot</title>
     <link rel="stylesheet" type="text/css" href="{% static 'mychatbot/styles.css' %}" />
 </head>
-<body>
-<h1>this is the most important heading</h1>
-<h2>This is heading 2</h2>
-<h3 style="text-align:center">This is heading 3</h3>
-<h4>This is heading 4</h4>
-<h5 style="font-family:verdana">This is heading 5</h5>
-<h6>This is the least important heading</h6>
-<p>This is my first paragraph</p>
 
-<p>This is a new page on the interstellar travel agency website</p>
-<a href="https://www.theworldsworstwebsiteever.com">This is a link to a website</a>
-<p>
-    {% load static %} <img src="{% static "mychatbot/media/rainytown.jpg" %}" alt="Rainy weather in a British seaside
-    town"/></p>
-<p>
-</p>
-<p>Here is a quote from Spike Milligan:</p>
-<p>A quote from the internet is: <q>Everybody is a genius.</q></p>
-<p>The <abbr title="World Health Organisation">WHO</abbr> was founded in 1948.</p>
-<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
-<bdo dir="rtl">This text will be written from right to left</bdo>
-<address>
-    Written by John Doe.<br>
-    Visit us at:<br>
-    Example.com<br>
-    Box 564, Disneyland<br>
-    USA
-</address>
+<body>
+<h1>The Fiona Park travel agency</h1>
+
+<ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">News</a></li>
+  <li><a href="#">Contact Us</a></li>
+  <li style="float:right"><a class="active" href="#">Chatbot</a></li>
+</ul>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form }}
+  <button type="submit">Submit</button>
+ </form>
+
 </body>
 </html>
